@@ -39,8 +39,6 @@ jobs:
     steps:
       - name: Checkout sources
         uses: actions/checkout@v6
-        with:
-          repository: 'ankitects/anki'
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -71,8 +69,8 @@ jobs:
       - name: Build and Publish
         uses: docker/build-push-action@v6
         with:
-          context: ./docs/syncserver
-          file: 'Dockerfile.distroless'
+          context: .
+          file: 'Dockerfile'
           platforms: linux/amd64
           push: true
           build-args: |
