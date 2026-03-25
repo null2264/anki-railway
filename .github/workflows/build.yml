@@ -75,4 +75,6 @@ jobs:
           file: 'Dockerfile.distroless'
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ steps.extract_version.outputs.version }}
+          build-args:
+            ANKI_VERSION: 25.09
+          tags: ghcr.io/${{ github.repository }}:25.09
