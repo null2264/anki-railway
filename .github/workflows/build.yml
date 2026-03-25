@@ -71,7 +71,7 @@ jobs:
       - name: Build and Publish
         uses: docker/build-push-action@v6
         with:
-          context: ./docs/syncserver/Dockerfile.distroless
+          context: ./docs/syncserver
           file: 'Dockerfile.distroless'
           platforms: linux/amd64
           push: true
